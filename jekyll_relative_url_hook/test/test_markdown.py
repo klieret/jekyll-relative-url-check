@@ -2,10 +2,10 @@ from jekyll_relative_url_hook.markdown import MarkdownRelativeURLHook
 
 
 def test_regex():
-    regex = MarkdownRelativeURLHook().absolute_url_regexs[0]
-    yes = ['[asdf](/asdf)"']
+    o = MarkdownRelativeURLHook()
+    yes = ['[asdf](/asdf)"', "![pic](/absolute/picture.png)"]
     for y in yes:
-        assert regex.findall(y)
+        assert not o._check_text(y)
     nos = ["", "nope", "[asdf](asdf)"]
     for no in nos:
-        assert not regex.findall(no)
+        assert o._check_text(no)
