@@ -1,4 +1,4 @@
-# Jekyll relative URL hook
+# Jekyll: Hook to enforce URLs relative to site.baseurl
 
 [![gh actions](https://github.com/klieret/jekyll-relative-url-hook/actions/workflows/test.yaml/badge.svg)](https://github.com/klieret/jekyll-relative-url-hook/actions)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/klieret/jekyll-relative-url-hook/main.svg)](https://results.pre-commit.ci/latest/github/klieret/jekyll-relative-url-hook/main)
