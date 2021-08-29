@@ -8,7 +8,9 @@
 A hook for [pre-commit](https://pre-commit.com/) that enforces that all links
 in a Jekyll project are relative to `{{ site.baseurl }}`.
 
-For examples, the following constructions should raise errors:
+## Examples
+
+The following constructions should raise errors:
 
 Markdown:
 
@@ -28,3 +30,9 @@ The reasoning behind this is that these links will break if the site is not
 directly deployed at `domain.com`, but e.g. at `user.github.io/projectname`.
 In the latter case, the above links will resolve to `user.github.io/absolute/link`,
 etc.
+
+## False positives
+
+* Include `JEKYLL_RELATIVE_URL_HOOK_SKIP_FILE` in a file to skip checking the entire
+file.
+* Include `JEKYLL_RELATIVE_URL_HOOK_SKIP_LINE` in a line to skip checking it

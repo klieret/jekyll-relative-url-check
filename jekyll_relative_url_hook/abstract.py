@@ -28,8 +28,12 @@ class RelativeURLHook:
         Returns:
 
         """
+        if "JEKYLL_RELATIVE_URL_HOOK_SKIP_FILE" in text:
+            return True
         found_any = False
         for line in text.split():
+            if "JEKYLL_RELATIVE_URL_HOOK_SKIP_LINE" in text:
+                continue
             found = set()
             for regex in self.absolute_url_regexs:
                 found |= set(regex.findall(line))
