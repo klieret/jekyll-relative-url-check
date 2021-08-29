@@ -93,4 +93,4 @@ jobs:
     - name: Test with pytest
       run: |
         cd dist
-        pytest --pyargs jekyll_relative_url_hook --cov jekyll_relative_url_hook --cov-report term-missing:skip-covered
+        pytest --pyargs jekyll_relative_url_hook
