@@ -52,9 +52,9 @@ jobs:
           - python-version: 3.6
             artifact: jekyll-relative-url-hook-*.tar.gz
           - python-version: 3.7
-            artifact: jekyll-relative-url-hook-*.whl
+            artifact: jekyll-relative-url-hook-*.tar.gz
           - python-version: 3.8
-            artifact: jekyll-relative-url-hook-*.whl
+            artifact: jekyll-relative-url-hook-*.tar.gz
           - python-version: 3.9
             artifact: jekyll-relative-url-hook-*.tar.gz
 
