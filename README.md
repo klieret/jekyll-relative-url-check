@@ -6,8 +6,11 @@
 [![License](https://img.shields.io/github/license/klieret/jekyll-relative-url-hook.svg)](https://github.com/klieret/jekyll-relative-url-hook/blob/main/LICENSE.txt)
 [![PR welcome](https://img.shields.io/badge/PR-Welcome-%23FF8300.svg)](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
 
-A hook for [pre-commit](https://pre-commit.com/) that enforces that all links
+A [pre-commit hook](https://pre-commit.com/) that enforces that all links
 in a Jekyll project are relative to `{{ site.baseurl }}`.
+
+The reasoning behind this is that links like `[link](/absolute/link)` will break if the site is not
+directly deployed at `domain.com`, but e.g. at `user.github.io/projectname`.
 
 ## Examples
 
@@ -27,13 +30,27 @@ href="/absolute/link"
 src="/absolute/picture.png"
 ```
 
-The reasoning behind this is that these links will break if the site is not
-directly deployed at `domain.com`, but e.g. at `user.github.io/projectname`.
-In the latter case, the above links will resolve to `user.github.io/absolute/link`,
-etc.
+## Installation
+
+Include the following snippet in your pre-commit config
+
+```yaml
+repos:
+-   repo: https://github.com/klieret/jekyll-relative-url-hook
+    rev: main
+    hooks:
+    -   id: jekyll_relative_url_html
+    -   id: jekyll_relative_url_markdown
+```
+
+Afterwards run `pre-commit autoupdate` to replace `main` with the latest release.
 
 ## False positives
 
 * Include `JEKYLL_RELATIVE_URL_HOOK_SKIP_FILE` in a file to skip checking the entire
 file.
 * Include `JEKYLL_RELATIVE_URL_HOOK_SKIP_LINE` in a line to skip checking it
+
+## Implementation
+
+Currently this hook only works by checking for several simple regular expressions.
