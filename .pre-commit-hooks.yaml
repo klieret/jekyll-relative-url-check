@@ -1,0 +1,8 @@
+- id: jekyll_relative_url_html
+  name: Jekyll Relative URL HTML
+  entry: html_pre_commit
+  types: ["html"]
+- id: jekyll_relative_url_markdown
+  name: Jekyll Relative URL Markdown
+  entry: markdown_pre_commit
+  types: ["markdown"]
