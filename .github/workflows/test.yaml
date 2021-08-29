@@ -86,11 +86,11 @@ jobs:
         cd dist
         python3 -m pip list
         python3 -m pip check
-        python3 -c "import jekyll-relative-url-hook"
+        python3 -c "import jekyll_relative_url_hook"
     - name: Install test dependencies
       run: |
         python3 -m pip install pytest pytest-cover pytest-subtests
     - name: Test with pytest
       run: |
         cd dist
-        pytest --pyargs jekyll-relative-url-hook --cov jekyll-relative-url-hook --cov-report term-missing:skip-covered
+        pytest --pyargs jekyll_relative_url_hook --cov jekyll_relative_url_hook --cov-report term-missing:skip-covered
