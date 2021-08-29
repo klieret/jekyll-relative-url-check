@@ -11,7 +11,6 @@ class RelativeURLHook:
         return self._check_file(file)
 
     def _check_file(self, file: Path):
-        print(file)
         return self._check_text(file.read_text(), context=f"(in file {file})")
 
     def check_files(self, files: Iterable[Path]):
