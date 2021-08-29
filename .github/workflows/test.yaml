@@ -36,7 +36,7 @@ jobs:
           pytest
       - uses: actions/upload-artifact@v2
         with:
-          name: jekyll_relative_url_hook dist ${{ github.run_number }}
+          name: jekyll-relative-url-hook dist ${{ github.run_number }}
           path: ./dist
       - name: Coveralls
         uses: AndreMiras/coveralls-python-action@develop
@@ -50,19 +50,19 @@ jobs:
         python-version: [3.6, 3.7, 3.8, 3.9]
         include:
           - python-version: 3.6
-            artifact: jekyll_relative_url_hook-*.tar.gz
+            artifact: jekyll-relative-url-hook-*.tar.gz
           - python-version: 3.7
-            artifact: jekyll_relative_url_hook-*.whl
+            artifact: jekyll-relative-url-hook-*.whl
           - python-version: 3.8
-            artifact: jekyll_relative_url_hook-*.whl
+            artifact: jekyll-relative-url-hook-*.whl
           - python-version: 3.9
-            artifact: jekyll_relative_url_hook-*.tar.gz
+            artifact: jekyll-relative-url-hook-*.tar.gz
 
     steps:
     - uses: actions/checkout@v2
     - uses: actions/download-artifact@v2
       with:
-        name: jekyll_relative_url_hook dist ${{ github.run_number }}
+        name: jekyll-relative-url-hook dist ${{ github.run_number }}
         path: ./dist
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
