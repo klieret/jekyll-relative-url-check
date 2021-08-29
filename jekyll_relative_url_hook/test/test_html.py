@@ -6,6 +6,6 @@ def test_regex():
     yes = ['href="/asdf"']
     for y in yes:
         assert regex.findall(y)
-    nos = ['', 'nope', 'href=']
+    nos = ["", "nope", "href="]
     for no in nos:
         assert not regex.findall(no)

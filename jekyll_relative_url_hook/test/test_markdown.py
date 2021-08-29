@@ -6,6 +6,6 @@ def test_regex():
     yes = ['[asdf](/asdf)"']
     for y in yes:
         assert regex.findall(y)
-    nos = ['', 'nope', '[asdf](asdf)']
+    nos = ["", "nope", "[asdf](asdf)"]
     for no in nos:
         assert not regex.findall(no)

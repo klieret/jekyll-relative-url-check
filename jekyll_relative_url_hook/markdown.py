@@ -10,7 +10,9 @@ from jekyll_relative_url_hook.abstract import RelativeURLHook
 class MarkdownRelativeURLHook(RelativeURLHook):
     def __init__(self):
         super().__init__()
-        self.absolute_url_regexs: List[re.Pattern] = [re.compile("\[[^]]*]\(/[^)]*\)")]
+        self.absolute_url_regexs: List[re.Pattern] = [
+            re.compile(r"\[[^]]*]\(/[^)]*\)")
+        ]
 
     def _check_file(self, file: Path):
         found_any = False

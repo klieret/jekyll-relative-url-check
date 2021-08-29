@@ -11,7 +11,9 @@ class HTMLRelativeURLHook(RelativeURLHook):
     def __init__(self):
         super().__init__()
         # todo: must support also single quotation marks etc.
-        self.absolute_url_regexs: List[re.Pattern] = [re.compile("href=\"/[^\"]*\"")]
+        self.absolute_url_regexs: List[re.Pattern] = [
+            re.compile(r'href="/[^"]*"')
+        ]
 
     def _check_file(self, file: Path):
         found_any = False
