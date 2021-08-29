@@ -1,5 +1,6 @@
 # Jekyll relative URL hook
 
+[![gh actions](https://github.com/klieret/jekyll-relative-url-hook/actions/workflows/test.yaml/badge.svg)](https://github.com/klieret/jekyll-relative-url-hook/actions)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/klieret/jekyll-relative-url-hook/main.svg)](https://results.pre-commit.ci/latest/github/klieret/jekyll-relative-url-hook/main)
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
 [![License](https://img.shields.io/github/license/klieret/jekyll-relative-url-hook.svg)](https://github.com/klieret/jekyll-relative-url-hook/blob/main/LICENSE.txt)
@@ -10,7 +11,7 @@ in a Jekyll project are relative to `{{ site.baseurl }}`.
 
 ## Examples
 
-The following constructions should raise errors:
+The following lines should raise errors:
 
 Markdown:
 
