@@ -21,7 +21,7 @@ class MarkdownRelativeURLHook(RelativeURLHook):
                 found |= set(regex.findall(line))
             if found:
                 print(
-                    f"We believe we have found absolute URLS: {found} in this"
+                    f"We believe we have found absolute URLS: {found} in this "
                     f"line: '{line}'"
                 )
                 found_any = True
