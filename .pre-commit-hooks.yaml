@@ -1,10 +1,10 @@
-- id: jekyll_relative_url_html
+- id: jekyll-relative-url-html
   name: Jekyll Relative URL HTML
-  entry: html_pre_commit
+  entry: jekyll-relative-url-check-html
   types: ["html"]
   language: python
-- id: jekyll_relative_url_markdown
+- id: jekyll-relative-url-markdown
   name: Jekyll Relative URL Markdown
-  entry: markdown_pre_commit
+  entry: jekyll-relative-url-check-markdown
   types: ["markdown"]
   language: python
