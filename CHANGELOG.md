@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fix
 
-* False negatives because text was split by lines not words [PR#3](https://github.com/klieret/jekyll-relative-url-check/pull/3)
+* Fix false negatives for links that include whitespace [PR#3](https://github.com/klieret/jekyll-relative-url-check/pull/3)
 
 ## 1.0.0 -- 2021-08-29
 
