@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/github/license/klieret/jekyll-relative-url-check.svg)](https://github.com/klieret/jekyll-relative-url-check/blob/main/LICENSE.txt)
 [![PR welcome](https://img.shields.io/badge/PR-Welcome-%23FF8300.svg)](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
 
-A [pre-commit hook](https://pre-commit.com/) that enforces that all links
+A script and [pre-commit hook](https://pre-commit.com/) that enforces that all links
 in a Jekyll project are relative to `{{ site.baseurl }}`.
 
 The reasoning behind this is that links like `[link](/absolute/link)` will break if the site is not
