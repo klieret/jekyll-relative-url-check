@@ -39,8 +39,8 @@ repos:
 -   repo: https://github.com/klieret/jekyll-relative-url-check
     rev: main
     hooks:
-    -   id: jekyll_relative_url_html
-    -   id: jekyll_relative_url_markdown
+    -   id: jekyll-relative-url-check-html
+    -   id: jekyll-relative-url-check-markdown
 ```
 
 Afterwards run `pre-commit autoupdate` to replace `main` with the latest release.
