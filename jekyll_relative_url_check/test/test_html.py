@@ -1,4 +1,4 @@
-from jekyll_relative_url_hook.html import HTMLRelativeURLHook
+from jekyll_relative_url_check.html import HTMLRelativeURLHook
 
 
 def test_regex():

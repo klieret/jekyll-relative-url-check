@@ -3,7 +3,7 @@ import re
 from typing import List
 
 # ours
-from jekyll_relative_url_hook.abstract import RelativeURLHook
+from jekyll_relative_url_check.abstract import RelativeURLHook
 
 
 class MarkdownRelativeURLHook(RelativeURLHook):
