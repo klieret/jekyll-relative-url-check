@@ -1,9 +1,9 @@
-- id: jekyll-relative-url-html
+- id: jekyll-relative-url-check-html
   name: Jekyll Relative URL HTML
   entry: jekyll-relative-url-check-html
   types: ["html"]
   language: python
-- id: jekyll-relative-url-markdown
+- id: jekyll-relative-url-check-markdown
   name: Jekyll Relative URL Markdown
   entry: jekyll-relative-url-check-markdown
   types: ["markdown"]
