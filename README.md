@@ -34,6 +34,17 @@ src="/absolute/picture.png"
 
 ### As a pre-commit hook
 
+#### Test it
+
+Simply run the following (no explicit installation required)
+
+```bash
+pre-commit try-repo https://github.com/klieret/jekyll-relative-url-check jekyll-relative-url-check-html --verbose --all-files
+pre-commit try-repo https://github.com/klieret/jekyll-relative-url-check jekyll-relative-url-check-markdown --verbose --all-files
+```
+
+#### Install it
+
 Include the following snippet in your pre-commit config
 
 ```yaml
