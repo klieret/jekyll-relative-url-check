@@ -11,7 +11,7 @@ class RelativeURLHook:
         return self._check_file(file)
 
     def _check_file(self, file: Path):
-        return self._check_text(file.read_text(), context=f"(in file {file})")
+        return self._check_text(file.read_text(), context=f"in file {file}")
 
     def check_files(self, files: Iterable[Path]):
         return all(map(self._check_file, files))
@@ -38,9 +38,12 @@ class RelativeURLHook:
             for regex in self.absolute_url_regexs:
                 found |= set(regex.findall(line))
             if found:
-                print(
+                msg = (
                     f"We believe we have found absolute URLS: {found} in this "
-                    f"line: '{line}' ({context})"
+                    f"line: '{line}'"
                 )
+                if context:
+                    msg += f" ({context})"
+                print(msg)
                 found_any = True
         return not found_any
