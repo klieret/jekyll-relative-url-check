@@ -2,7 +2,7 @@
 import sys
 
 # ours
-from jekyll_relative_url_hook.cli import markdown_pre_commit
+from jekyll_relative_url_check.cli import markdown_pre_commit
 
 
 if __name__ == "__main__":
