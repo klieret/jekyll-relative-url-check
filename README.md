@@ -1,4 +1,4 @@
-# Jekyll: Hook to enforce URLs relative to site.baseurl
+# Jekyll: Enforce enforce URLs relative to site.baseurl
 
 [![gh actions](https://github.com/klieret/jekyll-relative-url-check/actions/workflows/test.yaml/badge.svg)](https://github.com/klieret/jekyll-relative-url-check/actions)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/klieret/jekyll-relative-url-check/main.svg)](https://results.pre-commit.ci/latest/github/klieret/jekyll-relative-url-check/main)
@@ -30,7 +30,9 @@ href="/absolute/link"
 src="/absolute/picture.png"
 ```
 
-## Installation
+## Installation & usage
+
+### As a pre-commit hook
 
 Include the following snippet in your pre-commit config
 
@@ -44,6 +46,14 @@ repos:
 ```
 
 Afterwards run `pre-commit autoupdate` to replace `main` with the latest release.
+
+### As a script
+
+```bash
+pip3 install .
+jekyll-relative-url-check-html [FILE]...
+jekyll-relative-url-check-markdown [FILE]...
+```
 
 ## False positives
 
