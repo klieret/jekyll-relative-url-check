@@ -31,7 +31,7 @@ class RelativeURLHook:
         if "JEKYLL_RELATIVE_URL_CHECK_SKIP_FILE" in text:
             return True
         found_any = False
-        for line in text.split():
+        for line in text.split("\n"):
             if "JEKYLL_RELATIVE_URL_CHECK_SKIP_LINE" in text:
                 continue
             found = set()
