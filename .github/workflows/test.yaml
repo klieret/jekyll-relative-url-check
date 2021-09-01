@@ -38,8 +38,6 @@ jobs:
         with:
           name: jekyll-relative-url-check dist ${{ github.run_number }}
           path: ./dist
-      - name: Coveralls
-        uses: AndreMiras/coveralls-python-action@develop
 
   test:
     needs: [build]
