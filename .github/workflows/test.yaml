@@ -38,8 +38,6 @@ jobs:
         with:
           name: jekyll-relative-url-check dist ${{ github.run_number }}
           path: ./dist
-      - name: Coveralls
-        uses: AndreMiras/coveralls-python-action@develop
 
   test:
     needs: [build]
@@ -94,3 +92,9 @@ jobs:
       run: |
         cd dist
         pytest --pyargs jekyll_relative_url_check
+    - uses: actions/checkout@v2
+    - name: "Integration checks"
+      run: |
+        python3 -m pip install pre-commit
+        cd example_data
+        pytest integration_tests.py
