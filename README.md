@@ -12,9 +12,7 @@ in a Jekyll project are relative to `{{ site.baseurl }}`.
 The reasoning behind this is that links like `[link](/absolute/link)` will break if the site is not
 directly deployed at `domain.com`, but e.g. at `user.github.io/projectname`.
 
-## Examples
-
-The following lines should raise errors:
+For example, the following lines should raise errors:
 
 Markdown:
 
@@ -30,7 +28,20 @@ href="/absolute/link"
 src="/absolute/picture.png"
 ```
 
-## Installation
+## 📦 Installation & usage
+
+### 🎣 As a pre-commit hook
+
+#### Test it
+
+Simply run the following (no explicit installation required)
+
+```bash
+pre-commit try-repo https://github.com/klieret/jekyll-relative-url-check jekyll-relative-url-check-html --verbose --all-files
+pre-commit try-repo https://github.com/klieret/jekyll-relative-url-check jekyll-relative-url-check-markdown --verbose --all-files
+```
+
+#### Install it
 
 Include the following snippet in your pre-commit config
 
@@ -45,12 +56,20 @@ repos:
 
 Afterwards run `pre-commit autoupdate` to replace `main` with the latest release.
 
-## False positives
+### 🔨 As a script
+
+```bash
+pip3 install .
+jekyll-relative-url-check-html [FILE]...
+jekyll-relative-url-check-markdown [FILE]...
+```
+
+## ⏫ Advanced usage
 
 * Include `JEKYLL_RELATIVE_URL_CHECK_SKIP_FILE` in a file to skip checking the entire
 file.
 * Include `JEKYLL_RELATIVE_URL_CHECK_SKIP_LINE` in a line to skip checking it
 
-## Implementation
+## 💻 Implementation
 
 Currently this hook only works by checking for several simple regular expressions.
