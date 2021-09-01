@@ -94,3 +94,8 @@ jobs:
       run: |
         cd dist
         pytest --pyargs jekyll_relative_url_check
+    - uses: actions/checkout@v2
+    - name: "Integration checks"
+      run: |
+        cd example_data
+        pytest integration_tests.py
