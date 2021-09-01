@@ -80,3 +80,19 @@ def random_test(suffix, should_fail=False):
 def test_pre_commit(suffix, should_fail):
     for i in range(2):
         random_test(suffix=suffix, should_fail=should_fail)
+
+
+@pytest.mark.parametrize(
+    "suffix,failing", itertools.product(["markdown", "html"], [True, False])
+)
+def test_executable(suffix, failing):
+    fs = "failing" if failing else "passing"
+    these_files = files[fs][suffix]
+    for f in these_files:
+        rc = subprocess.run(
+            [
+                f"jekyll-relative-url-check-{suffix}",
+                str(f),
+            ],
+        ).returncode
+        assert rc == 0 or failing
