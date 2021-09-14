@@ -3,7 +3,7 @@ from jekyll_relative_url_check.html import HTMLRelativeURLHook
 
 def test_regex():
     o = HTMLRelativeURLHook()
-    yes = ['href="/asdf"', "href='/asdf'"]
+    yes = ['href="/asdf"', "href='/asdf'", 'src="/asdf"', "src='/asdf'"]
     for y in yes:
         assert not o._check_text(y), y
     nos = ["", "nope", "href="]
