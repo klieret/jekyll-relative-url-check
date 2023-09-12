@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Python 3.8
         uses: actions/setup-python@v4
         with:
@@ -58,7 +58,7 @@ jobs:
           - python-version: "3.11"
             artifact: jekyll-relative-url-check-*.tar.gz
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: actions/download-artifact@v3
       with:
         name: jekyll-relative-url-check dist ${{ github.run_number }}
@@ -93,7 +93,7 @@ jobs:
       run: |
         cd dist
         pytest --pyargs jekyll_relative_url_check
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: "Integration checks"
       run: |
         python3 -m pip install pre-commit
